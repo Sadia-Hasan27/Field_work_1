@@ -47,7 +47,8 @@ def extract_information(url):
     session = HTMLSession()
     try:
         response = session.get(url)
-        title_tag = response.html.find('h1')
+        #print(response)
+        title_tag = response.html.find('#container > div > div.story-grid > div > div.story-content-wrapper.jzPe6 > div:nth-child(1) > div.story-head.NKo24 > div.story-title-info.BG103 > div:nth-child(2) > h1')
         print(len(title_tag), "title tags found:")
         print("Title: ", title_tag[0].text)
 
