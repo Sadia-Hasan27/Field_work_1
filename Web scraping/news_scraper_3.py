@@ -1,6 +1,8 @@
 import time
 import datetime
 from requests_html import HTMLSession
+from lxml.html.clean import Cleaner
+from dotenv import load_dotenv
 from mysql.connector import Error
 from db_connection import create_db_connection
 from news_insert_modified import (execute_query,
